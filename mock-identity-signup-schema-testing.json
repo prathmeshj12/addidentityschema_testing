@@ -55,7 +55,7 @@
     },
     "password": {
       "type": "string",
-      "pattern": "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[\\x5F\\W])(?=.{8,20})[a-zA-Z0-9\\x5F\\W]{8,20}$"
+      "pattern": "^[A-Za-z0-9]{6}$"
     }
   },
   "required": ["fullName", "phone", "password"],
