@@ -55,7 +55,7 @@
     },
     "password": {
       "type": "string",
-      "pattern": "^[a-zA-Z0-9]{6,10}$"
+      "pattern": "^[A-Za-z0-9]{6}$"
     }
   },
   "required": ["fullName", "phone", "password"],
