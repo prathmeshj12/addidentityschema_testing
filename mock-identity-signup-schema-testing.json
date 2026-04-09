@@ -20,7 +20,7 @@
     }
   },
   "properties": {
-    "fullName": {
+  "fullName": {
       "allOf": [
         {
           "$ref": "#/$defs/langField"
