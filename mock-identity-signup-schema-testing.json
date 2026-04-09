@@ -20,7 +20,11 @@
     }
   },
   "properties": {
-  "fullName": {
+    "individualId": {
+      "type": "string",
+      "pattern": "^\\d{9,10}$"
+    },
+    "fullName": {
       "allOf": [
         {
           "$ref": "#/$defs/langField"
