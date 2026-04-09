@@ -22,7 +22,7 @@
   "properties": {
     "individualId": {
       "type": "string",
-      "pattern": "^\\d{9,10}$"
+      "pattern": "^\+91[1-9]\d{8,12}$"
     },
     "fullName": {
       "allOf": [
@@ -51,7 +51,7 @@
     },
     "phone": {
       "type": "string",
-      "pattern": "^\\+91[1-9]\\d{7,13}$"
+      "pattern": "^\+91[1-9]\d{8,12}$"
     },
     "password": {
       "type": "string",
