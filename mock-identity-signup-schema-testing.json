@@ -20,10 +20,6 @@
     }
   },
   "properties": {
-    "individualId": {
-      "type": "string",
-      "pattern": "^\\d{9,10}$"
-    },
     "fullName": {
       "allOf": [
         {
