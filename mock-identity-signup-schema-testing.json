@@ -22,7 +22,7 @@
   "properties": {
     "individualId": {
       "type": "string",
-      "pattern": "^[1-9]\d{8,12}$"
+      "pattern": "^[1-9]\\d{8,12}$"
     },
     "fullName": {
       "allOf": [
@@ -51,11 +51,11 @@
     },
     "phone": {
       "type": "string",
-      "pattern": "^\\+91[1-9]\\d{8,12}$"
+      "pattern": "^[1-9]\\d{8,12}$"
     },
     "password": {
       "type": "string",
-      "pattern": "^[1-9]\d{8,12}$"
+      "pattern": "^[A-Za-z0-9]{8,20}$"
     }
   },
   "required": ["fullName", "phone", "password"],
