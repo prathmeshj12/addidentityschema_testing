@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$defs": {
+    "langField": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "properties": {
+    "individualId": {
+      "type": "string",
+      "pattern": "^[1-9]\\d{8,12}$"
+    },
+    "fullName": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "givenName": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "familyName": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "middleName": {
+      "type": ["array", "null"],
+      "if": {
+        "type": "array"
+      },
+      "then": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/langField"
+          },
+          {
+            "items": {
+              "properties": {
+                "value": {
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "nickName": {
+      "type": ["array", "null"],
+      "if": {
+        "type": "array"
+      },
+      "then": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/langField"
+          },
+          {
+            "items": {
+              "properties": {
+                "value": {
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "preferredUsername": {
+      "type": ["array", "null"],
+      "if": {
+        "type": "array"
+      },
+      "then": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/langField"
+          },
+          {
+            "items": {
+              "properties": {
+                "value": {
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "gender": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "streetAddress": {
+      "type": ["array", "null"],
+      "if": {
+        "type": "array"
+      },
+      "then": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/langField"
+          },
+          {
+            "items": {
+              "properties": {
+                "value": {
+                  "pattern": "\\S"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "locality": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "region": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "country": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "pin": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "preferredLang": {
+      "type":  ["string", "null"]
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "postalCode": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "encodedPhoto": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^[1-9]\\d{8,12}$"
+    },
+    "zoneInfo": {
+      "type": ["string", "null"]
+    },
+    "locale": {
+      "type":  ["string", "null"],
+      "pattern": "\\S"
+    },
+    "password": {
+      "type": ["string", "null"],
+      "pattern": "^[A-Za-z0-9]{8,20}$"
+    }
+  },
+  "required": [
+    "individualId",
+    "fullName",
+    "givenName",
+    "familyName",
+    "gender",
+    "locality",
+    "region",
+    "country",
+    "pin",
+    "preferredLang",
+    "dateOfBirth",
+    "postalCode",
+    "encodedPhoto",
+    "email",
+    "phone"
+  ],
+  "additionalProperties": false
+}
