@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$defs": {
+    "langField": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "pattern": "^[a-zA-Z]{2,5}$"
+          },
+          "value": {
+            "type": "string",
+            "pattern": "^[\\p{L}0-9 .,'-]{1,100}$"
+          }
+        },
+        "required": ["language", "value"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "properties": {
+
+    "individualId": {
+      "type": "string",
+      "pattern": "^\\+91[1-9]\\d{9}$"
+    },
+
+    "fullName": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" }
+      ]
+    },
+
+    "givenName": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" }
+      ]
+    },
+
+    "familyName": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" }
+      ]
+    },
+
+    "middleName": {
+      "type": ["array", "null"],
+      "items": { "$ref": "#/$defs/langField/items" }
+    },
+
+    "nickName": {
+      "type": ["array", "null"],
+      "items": { "$ref": "#/$defs/langField/items" }
+    },
+
+    "preferredUsername": {
+      "type": ["array", "null"],
+      "items": { "$ref": "#/$defs/langField/items" }
+    },
+
+    "gender": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "^(Male|Female|Other)$"
+              }
+            }
+          }
+        }
+      ]
+    },
+
+    "streetAddress": {
+      "type": ["array", "null"],
+      "items": { "$ref": "#/$defs/langField/items" }
+    },
+
+    "locality": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" }
+      ]
+    },
+
+    "region": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" }
+      ]
+    },
+
+    "country": {
+      "allOf": [
+        { "$ref": "#/$defs/langField" }
+      ]
+    },
+
+    "pin": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{5}$"
+    },
+
+    "preferredLang": {
+      "type": ["string", "null"],
+      "pattern": "^[a-zA-Z]{2,5}$"
+    },
+
+    "dateOfBirth": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+
+    "postalCode": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{5}$"
+    },
+
+    "encodedPhoto": {
+      "type": "string"
+    },
+
+    "email": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+    },
+
+    "phone": {
+      "type": "string",
+      "pattern": "^\\+91[1-9]\\d{9}$"
+    },
+
+    "zoneInfo": {
+      "type": ["string", "null"]
+    },
+
+    "locale": {
+      "type": ["string", "null"],
+      "pattern": "^[a-zA-Z_]{2,10}$"
+    },
+
+    "password": {
+      "type": ["string", "null"],
+      "pattern": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,20}$"
+    }
+  },
+
+  "required": [
+    "individualId",
+    "fullName",
+    "givenName",
+    "familyName",
+    "gender",
+    "locality",
+    "region",
+    "country",
+    "pin",
+    "preferredLang",
+    "dateOfBirth",
+    "postalCode",
+    "encodedPhoto",
+    "email",
+    "phone"
+  ],
+
+  "additionalProperties": false
+}
