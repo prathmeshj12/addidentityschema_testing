@@ -25,7 +25,7 @@
   "properties": {
     "individualId": {
       "type": "string",
-      "pattern": "^[1-9]\\d{8,12}$"
+      "pattern": "^\\+91[1-9]\\d{8,12}$"
     },
     "fullName": {
       "allOf": [
@@ -62,7 +62,7 @@
           "items": {
             "properties": {
               "value": {
-                "pattern": "\\S"
+                "pattern": "^.*\\S.*$"
               }
             }
           }
@@ -218,7 +218,8 @@
       "pattern": "\\S"
     },
     "preferredLang": {
-      "type":  ["string", "null"]
+      "type":  ["string", "null"],
+      "pattern": "^\\S+$"
     },
     "dateOfBirth": {
       "type": "string",
@@ -237,7 +238,7 @@
     },
     "phone": {
       "type": "string",
-      "pattern": "^[1-9]\\d{8,12}$"
+      "pattern": "^\\+91[1-9]\\d{8,12}$"
     },
     "zoneInfo": {
       "type": ["string", "null"]
