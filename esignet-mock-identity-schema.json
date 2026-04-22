@@ -25,7 +25,7 @@
   "properties": {
     "individualId": {
       "type": "string",
-      "pattern": "^\\+91[1-9]\\d{9}$"
+      "pattern": "^\\+91[1-9]\\d{9,10}$"
     },
     "fullName": {
       "allOf": [
@@ -238,7 +238,7 @@
     },
     "phone": {
       "type": "string",
-      "pattern": "^\\+91[1-9]\\d{9}$"
+      "pattern": "^\\+91[1-9]\\d{9,10}$"
     },
     "zoneInfo": {
       "type": ["string", "null"]
