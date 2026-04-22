@@ -55,7 +55,7 @@
     },
     "password": {
       "type": "string",
-      "pattern": "^[A-Za-z0-9]{8,20}$"
+      "pattern": "^\\S{8,20}$"
     }
   },
   "required": ["fullName", "phone", "password"],
