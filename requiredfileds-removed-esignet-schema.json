@@ -254,7 +254,6 @@
   },
   "required": [
     "preferredLang",
-    "email",
     "phone"
   ],
   "additionalProperties": false
