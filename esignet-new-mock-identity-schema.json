@@ -68,7 +68,7 @@
           "items": {
             "properties": {
               "value": {
-                "pattern": "^(Male|Female|Other)$"
+                "pattern": "\\S"
               }
             }
           }
