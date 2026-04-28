@@ -62,6 +62,6 @@
       "format": "email"
     }
   },
-  "required": ["fullName", "phone", "password"],
+  "required": ["fullName", "phone", "password","preferredLang"],
   "additionalProperties": true
 }
