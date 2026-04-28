@@ -46,7 +46,7 @@
     },
     "preferredLang": {
       "type": "string",
-      "enum": ["khm", "eng", "fra", "ara"],
+      "enum": ["khm", "eng", "fra", "ara","hin"],
       "nullable": true
     },
     "phone": {
