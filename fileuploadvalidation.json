@@ -176,6 +176,7 @@
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                     "application/msword"
                 ],
+                "maxFileSizeMB": 1,
                 "alignmentGroup": "groupH"
             },
             {
@@ -196,6 +197,7 @@
                     "image/jpg",
                     "image/png"
                 ],
+                 "maxFileSizeMB": 1,   
                 "alignmentGroup": "groupI"
             },
             {
