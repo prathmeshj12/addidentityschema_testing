@@ -11,7 +11,24 @@
                     "eng": "Enter your username in phone number",
                     "khm": "សូមបញ្ចូលឈ្មោះអ្នកប្រើប្រាស់"
                 },
-                "validators": [],
+                "validators": [
+                    {
+                        "regex": "^\\+91[1-9]\\d{8,9}$",
+                        "error": {
+                            "eng": "Number should be entered from 9,10 digit",
+                            "khm": "គោត្តនាម-នាមត្រូវតែមានតែអក្សរខ្មែរ"
+                        },
+                        "langCode": "km"
+                    },
+                    {
+                        "regex": "^\\+91[1-9]\\d{8,9}$",
+                        "error": {
+                            "eng": "Number should be entered from 9,10 digit",
+                            "khm": "ឈ្មោះ​ពេញ​ត្រូវតែសរសេរជាភាសាអង់គ្លេសតែប៉ុណ្ណោះ"
+                        },
+                        "langCode": "en"
+                    }
+                ],
                 "required": false,
                 "disabled": false,
                 "prefix": [
@@ -62,7 +79,7 @@
                 "capsLockCheck": true,
                 "controlType": "password",
                 "labelName": {
-                    "eng": "Password at risk",
+                    "eng": "Password should be kept secret",
                     "khm": "ពាក្យសម្ងាត់"
                 },
                 "placeholder": {
@@ -73,6 +90,7 @@
                     "eng": "Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.",
                     "khm": "ពាក្យសម្ងាត់ត្រូវតែមានយ៉ាងហោចណាស់ ៨ តួអក្សរ មានតួអក្សរធំមួយ តួអក្សរតូចមួយ លេខមួយ និងតួអក្សរពិសេសមួយ។"
                 },
+                "regex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z\\d]).{8,20}$",
                 "alignmentGroup": "groupC",
                 "required": true
             },
