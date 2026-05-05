@@ -62,7 +62,7 @@
     },
     "dob": {
       "type": "string",
-      "pattern": "\\S"
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
     },
     "preferredLang": {
         "bioAttributes": [],
@@ -77,6 +77,10 @@
         "format": "none",
         "type": "string",
         "fieldType": "dynamic"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
     }
   },
   "required": [
