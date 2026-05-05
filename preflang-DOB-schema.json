@@ -86,7 +86,8 @@
   "required": [
     "fullName",
     "password",
-    "phone"
+    "phone",
+    "preferredLang"
   ],
   "additionalProperties": true
 }
