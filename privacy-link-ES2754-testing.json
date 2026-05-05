@@ -1,0 +1,348 @@
+{
+   "schema":[
+      {
+         "id":"phone",
+         "controlType":"phone",
+         "labelName":{
+            "en":"Username",
+            "km":"ឈ្មោះ​អ្នកប្រើប្រាស់"
+         },
+         "placeholder":{
+            "eng":"Enter your personal phone number ",
+            "khm":"សូមបញ្ចូលឈ្មោះអ្នកប្រើប្រាស់"
+         },
+         "validators":[
+            {
+               "regex":"^\\d{9,10}$",
+               "error":{
+                  "eng":"Username must be a valid phone number with 9 or 10 digits",
+                  "khm":"ឈ្មោះ​អ្នកប្រើប្រាស់ត្រូវតែជាលេខទូរស័ព្ទដែលមានលេខ 9 ឬ 10 តួ"
+               }
+            },
+            {
+               "regex":"^(?!0).*$",
+               "error":{
+                  "eng":"Mobile number should not start with zero",
+                  "khm":"លេខទូរស័ព្ទមិនគួរចាប់ផ្តើមជាមួយលេខសូន្យ"
+               }
+            }
+         ],
+         "required":false,
+         "disabled":false,
+         "prefix":[
+            "+91"
+         ],
+         "alignmentGroup":"groupA"
+      },
+      {
+         "id":"fullName",
+         "capsLockCheck":true,
+         "controlType":"textbox",
+         "type":"simpleType",
+         "labelName":{
+            "eng":"Full Name in English",
+            "khm":"គោត្តនាម-នាម"
+         },
+         "placeholder":{
+            "en":"Enter Full Name in English",
+            "km":"បញ្ចូលគោត្តនាម-នាមជាភាសាខ្មែរ"
+         },
+         "validators":[
+            {
+               "regex":"^[\\u1780-\\u17FF\\u19E0-\\u19FF\\u1A00-\\u1A9F\\u0020]{1,30}$",
+               "error":{
+                  "eng":"Full Name has to be in Khmer only",
+                  "khm":"គោត្តនាម-នាមត្រូវតែមានតែអក្សរខ្មែរ"
+               },
+               "langCode":"km"
+            },
+            {
+               "regex":"^[a-zA-Z][a-zA-Z ]{1,30}$",
+               "error":{
+                  "eng":"Full Name has to be in English only",
+                  "khm":"ឈ្មោះ​ពេញ​ត្រូវតែសរសេរជាភាសាអង់គ្លេសតែប៉ុណ្ណោះ"
+               },
+               "langCode":"en"
+            }
+         ],
+         "info":{
+            "en":"Maximum 30 characters allowed with no alphabets or special characters, except space.",
+            "km":"ជាអតិបរមា 30 តួអក្សរត្រូវបានអនុញ្ញាត និងមិនគួរមានលេខ ឬតួអក្សរពិសេសណាមួយឡើយ លើកលែងតែដកឃ្លា។"
+         },
+         "alignmentGroup":"groupB",
+         "required":true
+      },
+      {
+         "id":"password",
+         "capsLockCheck":true,
+         "controlType":"password",
+         "labelName":{
+            "eng":"Password should be kept secret",
+            "khm":"ពាក្យសម្ងាត់"
+         },
+         "placeholder":{
+            "eng":"Enter your password",
+            "khm":"សូមបញ្ចូលពាក្យសម្ងាត់"
+         },
+         "info":{
+            "eng":"Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.",
+            "khm":"ពាក្យសម្ងាត់ត្រូវតែមានយ៉ាងហោចណាស់ ៨ តួអក្សរ មានតួអក្សរធំមួយ តួអក្សរតូចមួយ លេខមួយ និងតួអក្សរពិសេសមួយ។"
+         },
+         "validators":[
+            {
+               "regex":"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z\\d]).{8,20}$",
+               "error":{
+                  "eng":"Password must be 8-20 characters long and include uppercase, lowercase, number, and special character",
+                  "khm":"ពាក្យសម្ងាត់ត្រូវមាន 8-20 តួអក្សរ និងមានអក្សរធំ អក្សរតូច លេខ និងតួអក្សរពិសេស"
+               }
+            }
+         ],
+         "alignmentGroup":"groupC",
+         "required":true
+      },
+      {
+         "id":"photoCapture",
+         "controlType":"photo",
+         "labelName":{
+            "eng":"Capture Photo",
+            "khm":"ថតរូប"
+         },
+         "placeholder":{
+            "eng":"Click to capture photo",
+            "khm":"ចុចដើម្បីថតរូប"
+         },
+         "info":{
+            "eng":"Please click here to capture your photo using your device's camera.",
+            "khm":"សូមចុចទីនេះដើម្បីថតរូបរបស់អ្នកដោយប្រើកាមេរ៉ារបស់ឧបករណ៍របស់អ្នក។"
+         },
+         "acceptedFileTypes":"image/jpeg , image/jpg , image/png , image/webp",
+         "required":true,
+         "alignmentGroup":"groupF"
+      },
+      {
+         "id":"preferredLang",
+         "controlType":"textbox",
+         "labelName":{
+            "eng":"Preferred Lang",
+            "khm":"ភាសាដែលចូលចិត្ត"
+         },
+         "info":{
+            "eng":"Preferred Lang",
+            "khm":"ភាសាដែលចូលចិត្ត"
+         },
+         "required":true,
+         "disabled":true
+      },
+      {
+         "id":"dob",
+         "controlType":"date",
+         "labelName":{
+            "eng":"Date of Birth",
+            "khm":"ថ្ងៃខែឆ្នាំកំណើត"
+         },
+         "minAge":5,
+         "maxAge":10,
+         "alignmentGroup":"groupE",
+         "required":true
+      },
+      {
+         "id":"details",
+         "controlType":"textarea",
+         "labelName":{
+            "eng":"Details",
+            "khm":"ព័ត៌មានលម្អិត"
+         },
+         "placeholder":{
+            "eng":"Enter Details",
+            "khm":"បញ្ចូលព័ត៌មានលម្អិត"
+         },
+         "validators":[
+            {
+               "regex":"^\\d{9,10}$",
+               "error":{
+                  "eng":"Username must be a valid phone number with 9 or 10 digits",
+                  "khm":"ឈ្មោះ​អ្នកប្រើប្រាស់ត្រូវតែជាលេខទូរស័ព្ទដែលមានលេខ 9 ឬ 10 តួ"
+               }
+            },
+            {
+               "regex":"^(?!0).*$",
+               "error":{
+                  "eng":"Mobile number should not start with zero",
+                  "khm":"លេខទូរស័ព្ទមិនគួរចាប់ផ្តើមជាមួយលេខសូន្យ"
+               }
+            }
+         ],
+         "alignmentGroup":"groupF",
+         "required":true,
+         "rows":"abc"
+      },
+      {
+         "id":"gender",
+         "subType":"genderVal",
+         "controlType":"radio",
+         "labelName":{
+            "eng":"Gender",
+            "khm":"ភេទ"
+         },
+         "alignmentGroup":"groupG",
+         "required":true
+      },
+      {
+         "id":"passport",
+         "subType":"passportVal",
+         "controlType":"fileupload",
+         "labelName":{
+            "eng":"Passport",
+            "khm":"លិខិតឆ្លងដែន"
+         },
+         "acceptedFileTypes":[
+            "application/pdf",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/msword"
+         ],
+         "maxFileSizeMB":1,
+         "alignmentGroup":"groupH"
+      },
+      {
+         "id":"photo",
+         "subType":"photoVal",
+         "controlType":"fileupload",
+         "labelName":{
+            "eng":"Photo",
+            "khm":"រូបថត"
+         },
+         "placeholder":{
+            "eng":"Select an Option",
+            "khm":"លិខិតឆ្លងដែន"
+         },
+         "required":false,
+         "acceptedFileTypes":[
+            "image/jpeg",
+            "image/jpg",
+            "image/png"
+         ],
+         "maxFileSizeMB":1,
+         "alignmentGroup":"groupI"
+      },
+      {
+         "id":"consent",
+         "controlType":"checkbox",
+      "labelName": {
+        "eng": "I agree to <b><a target='_blank' href='https://www.example.com/'>Terms & Conditions</a></b> and <b><a target='_blank' href='https://www.example.com/'>Privacy Policy</a></b>, to store & process my information as required.",
+        "khm": "ខ្ញុំយល់ព្រមតាម<b><a target='_blank' href='https://www.example.com/'>លក្ខខណ្ឌ</a></b> និង<b><a target='_blank' href='https://www.example.com/'>គោលការណ៍ឯកជនភាព</a></b>របស់ប្រទេសកម្ពុជា ដើម្បីរក្សាទុក និងដំណើរការព័ត៌មានរបស់ខ្ញុំតាមតម្រូវការ។"
+      },
+         "required":true
+      }
+   ],
+   "resetPasswordChallengeFields":[
+      "fullName"
+   ],
+   "allowedValues":{
+      "preferredLang":"khm",
+      "genderVal":{
+         "male":{
+            "eng":"Male",
+            "khm":"ប្រុស"
+         },
+         "female":{
+            "eng":"Female",
+            "khm":"ស្រី"
+         },
+         "other":{
+            "eng":"Other",
+            "khm":"ផ្សេងទៀត"
+         }
+      },
+      "passportVal":{
+         "aadhar":{
+            "en":"Aadhar ID",
+            "km":"អាយឌីអាហ្កាដារ"
+         },
+         "rental":{
+            "en":"Rental",
+            "km":"ជួល"
+         }
+      },
+      "photoVal":{
+         "selfie":{
+            "en":"Selfie",
+            "km":"រូបថត"
+         },
+         "profile":{
+            "en":"Profile",
+            "km":"រូបថត"
+         }
+      }
+   },
+   "i18nValues":{
+      "errors":{
+         "required":{
+            "en":"This field is required",
+            "km":"វាលនេះត្រូវការទទួលបាន"
+         },
+         "capsLock":{
+            "en":"Caps Lock is on",
+            "km":"Caps Lock កំពុងបើក"
+         }
+      },
+      "labels":{
+         "password_confirm":{
+            "en":"Confirm Password",
+            "km":"បញ្ជាក់ពាក្យសម្ងាត់"
+         },
+         "capturePhoto":{
+            "en":"Capture Photo",
+            "km":"ថតរូប"
+         },
+         "clickToUpload":{
+            "en":"Click to upload",
+            "km":"ចុចដើម្បីផ្ទុកឡើង"
+         },
+         "docType":{
+            "en":"Document Type",
+            "km":"ប្រភេទឯកសារ"
+         },
+         "docRef":{
+            "en":"Document Reference ID",
+            "km":"លេខយោងឯកសារ"
+         },
+         "proofOfDoc":{
+            "en":"Proof Of Document",
+            "km":"ភស្តុតាងឯកសារ"
+         }
+      },
+      "placeholders":{
+         "password_confirm":{
+            "en":"Enter your confirm password",
+            "km":"បញ្ចូលពាក្យសម្ងាត់ដែលបានបញ្ជាក់"
+         },
+         "docType":{
+            "en":"Select an option",
+            "km":"ជ្រើសជម្រើសមួយ"
+         },
+         "docRef":{
+            "en":"Enter Reference ID here",
+            "km":"បញ្ចូលលេខយោងនៅទីនេះ"
+         },
+         "proofOfDoc":{
+            "en":"Click to upload or drag and drop",
+            "km":"ចុចដើម្បីផ្ទុកឡើង ឬទាញបោះ"
+         }
+      }
+   },
+   "language":{
+      "mandatory":[
+         "eng"
+      ],
+      "optional":[
+         "khm"
+      ],
+      "langCodeMap":{
+         "khm":"km",
+         "eng":"en"
+      }
+   },
+   "errors":[
+      
+   ]
+}
