@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$defs": {
+    "langField": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "properties": {
+    "individualId": {
+      "type": "string",
+      "pattern": "^\\+91[1-9]\\d{8,9}$"
+    },
+    "fullName": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/langField"
+        },
+        {
+          "items": {
+            "properties": {
+              "value": {
+                "pattern": "^(?=.*[^\\s])^(?:[a-zA-ZÀ-ÿ\\s]{1,40}|[ء-ي\\s٩ٱ-ڿﹰ-﻿؀-ۿ]{1,40}|[ក-៿᧠-᧿ᨀ-᪟ ]{1,40})$"
+              },
+              "language": {
+                "type": "string",
+                "enum": [
+                  "khm",
+                  "eng",
+                  "fra",
+                  "ara"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^\\+91[1-9]\\d{8,9}$"
+    },
+    "password": {
+      "type": "string",
+      "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^A-Za-z\\d]).{8,20}$"
+    },
+    "dob": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "preferredLang": {
+        "bioAttributes": [],
+        "validators": [
+            {
+                "validator": "(^eng$|^khm$)",
+                "arguments": [],
+                "type": "regex"
+            }
+        ],
+        "fieldCategory": "pvt",
+        "format": "none",
+        "type": "string",
+        "fieldType": "dynamic"
+    }
+  },
+  "required": [
+    "fullName",
+    "password",
+    "phone"
+  ],
+  "additionalProperties": true
+}
