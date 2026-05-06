@@ -8,7 +8,7 @@
             "km":"ឈ្មោះ​អ្នកប្រើប្រាស់"
          },
          "placeholder":{
-            "eng":"Enter your username in phone number",
+            "eng":"Enter your personal phone number",
             "khm":"សូមបញ្ចូលឈ្មោះអ្នកប្រើប្រាស់"
          },
          "validators":[
@@ -40,11 +40,11 @@
          "controlType":"textbox",
          "type":"simpleType",
          "labelName":{
-            "eng":"Full Name in English",
+            "eng":"Full Name has to be in English",
             "khm":"គោត្តនាម-នាម"
          },
          "placeholder":{
-            "en":"Enter Full Name in English",
+            "en":"Enter Full Name in Khmer",
             "km":"បញ្ចូលគោត្តនាម-នាមជាភាសាខ្មែរ"
          },
          "validators":[
@@ -140,8 +140,8 @@
             "eng":"Date of Birth",
             "khm":"ថ្ងៃខែឆ្នាំកំណើត"
          },
-         "minAge":5,
-         "maxAge":10,
+         "minAge":-1,
+         "maxAge":-2,
          "alignmentGroup":"groupE",
          "required":true
       },
@@ -201,7 +201,8 @@
             "application/msword"
          ],
          "maxFileSizeMB":1,
-         "alignmentGroup":"groupH"
+         "alignmentGroup":"groupH",
+         "required":true
       },
       {
          "id":"photo",
@@ -222,7 +223,8 @@
             "image/png"
          ],
          "maxFileSizeMB":1,
-         "alignmentGroup":"groupI"
+         "alignmentGroup":"groupI",
+         "required":true
       },
       {
          "id":"consent",
