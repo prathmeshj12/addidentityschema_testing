@@ -22,7 +22,7 @@
   "properties": {
     "individualId": {
       "type": "string",
-      "pattern": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+      "pattern": "^\\+91[1-9]\\d{8,9}$"
     },
     "fullName": {
       "allOf": [
