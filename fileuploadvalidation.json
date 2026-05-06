@@ -101,6 +101,20 @@
          "required":true
       },
       {
+      "id": "email",
+      "controlType": "textbox",
+      "labelName": {
+        "eng": "Enter EMail Address",
+        "khm": "អាសយដ្ឋានអ៊ីមែល"
+      },
+      "placeholder": {
+        "eng": "Enter your email address",
+        "khm": "សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក"
+      },
+      "required": true,
+      "alignmentGroup": "groupD"
+    },
+      {
          "id":"photoCapture",
          "controlType":"photo",
          "labelName":{
