@@ -1,0 +1,389 @@
+{
+    "schema": [
+      {
+        "id": "phone",
+        "controlType": "phone",
+        "labelName": {
+          "en": "Username",
+          "km": "ឈ្មោះ​អ្នកប្រើប្រាស់"
+        },
+        "placeholder": {
+          "eng": "Enter username",
+          "khm": "បញ្ចូលឈ្មោះ​អ្នកប្រើប្រាស់"
+        },
+        "validators": [
+          {
+            "regex": "^\\d{8,9}$",
+            "error": {
+              "eng": "Username must be a valid phone number with 8 or 9 digits",
+              "khm": "ឈ្មោះ​អ្នកប្រើប្រាស់ត្រូវតែជាលេខទូរស័ព្ទដែលមានលេខ 8 ឬ 9 តួ"
+            }
+          },
+          {
+            "regex": "^(?!0).*$",
+            "error": {
+              "eng": "Mobile number should not start with zero",
+              "khm": "លេខទូរស័ព្ទមិនគួរចាប់ផ្តើមជាមួយលេខសូន្យ"
+            }
+          }
+        ],
+        "required": false,
+        "prefix": ["+91", "+855"],
+        "alignmentGroup": "groupA",
+        "disabled": false
+      },
+      {
+        "id": "qualification",
+        "subType": "qualification",
+        "controlType": "dropdown",
+        "type": "string",
+        "capsLockCheck": true,
+        "labelName": {
+          "eng": "Qualification",
+          "khm": "វប្បធម៌"
+        },
+        "placeholder": {
+          "eng": "Select your qualification",
+          "khm": "សូមជ្រើសរើសវប្បធម៌"
+        },
+        "info": {
+          "en": "Please select your highest qualification.",
+          "khm": "In Khmer, Please select your highest qualification."
+        }
+      },
+      {
+        "id": "email",
+        "controlType": "textbox",
+        "labelName": {
+          "eng": "Enter Email Address",
+          "khm": "អ៊ីមែល"
+        },
+        "placeholder": {
+          "en": "Enter Email Address",
+          "km": "បញ្ចូលអ៊ីមែល"
+        },
+        "alignmentGroup": "groupB",
+        "required": false
+      },
+      {
+        "id": "fullName",
+        "controlType": "textbox",
+        "type": "simpleType",
+        "labelName": {
+          "eng": "Full Name",
+          "khm": "គោត្តនាម-នាម"
+        },
+        "placeholder": {
+          "en": "Enter Full Name",
+          "km": "បញ្ចូលគោត្តនាម-នាមជាភាសាខ្មែរ",
+          "ar": "أدخل الاسم الكامل"
+        },
+        "validators": [
+          {
+            "regex": "^[a-zA-Z][a-zA-Z ]{1,30}$",
+            "error": {
+              "eng": "Full Name has to be in English only",
+              "khm": "ឈ្មោះ​ពេញ​ត្រូវតែសរសេរជាភាសាអង់គ្លេសតែប៉ុណ្ណោះ"
+            },
+            "langCode": "en"
+          }
+        ],
+        "info": {
+          "en": "Maximum 30 characters allowed with no alphabets or special characters, except space.",
+          "km": "ជាអតិបរមា 30 តួអក្សរត្រូវបានអនុញ្ញាត និងមិនគួរមានលេខ ឬតួអក្សរពិសេសណាមួយឡើយ លើកលែងតែដកឃ្លា។"
+        },
+        "alignmentGroup": "groupB",
+        "required": false
+      },
+      {
+        "id": "password",
+        "controlType": "password",
+        "labelName": {
+          "eng": "Password",
+          "khm": "ពាក្យសម្ងាត់"
+        },
+        "placeholder": {
+          "eng": "Enter Password",
+          "khm": "បញ្ចូលពាក្យសម្ងាត់"
+        },
+        "info": {
+          "en": "Use 8 or more characters with a mix of alphabets and at least one number.",
+          "km": "ប្រើតួអក្សរ លាយជាមួយលេខ ឱ្យបានចំនួន8តួឬច្រើនជាងនេះ"
+        },
+        "alignmentGroup": "groupC",
+        "required": false
+      },
+      {
+        "id": "dob",
+        "controlType": "date",
+        "labelName": {
+          "eng": "Enter Date of Birth",
+          "khm": "ថ្ងៃខែឆ្នាំកំណើត"
+        },
+        "minAge": -1,
+        "maxAge": -2,
+        "alignmentGroup": "groupE",
+        "required": false,
+        "format": "dd-MM-yyyy",
+        "disabled": false
+      },
+      {
+        "id": "details",
+        "controlType": "textarea",
+        "labelName": {
+          "eng": "Details",
+          "khm": "ព័ត៌មានលម្អិត"
+        },
+        "placeholder": {
+          "eng": "Enter Details",
+          "khm": "បញ្ចូលព័ត៌មានលម្អិត"
+        },
+        "info": {
+          "eng": "Use 8 or more characters with a mix of alphabets and at least one number.",
+          "khm": "ប្រើតួអក្សរ លាយជាមួយលេខ ឱ្យបានចំនួន8តួឬច្រើនជាងនេះ"
+        },
+        "validators": [
+          {
+            "regex": "^\\d{9,10}$",
+            "error": {
+              "eng": "Username must be a valid phone number with 9 or 10 digits",
+              "khm": "ឈ្មោះ​អ្នកប្រើប្រាស់ត្រូវតែជាលេខទូរស័ព្ទដែលមានលេខ 9 ឬ 10 តួ"
+            }
+          },
+          {
+            "regex": "^(?!0).*$",
+            "error": {
+              "eng": "Mobile number should not start with zero",
+              "khm": "លេខទូរស័ព្ទមិនគួរចាប់ផ្តើមជាមួយលេខសូន្យ"
+            }
+          }
+        ],
+        "alignmentGroup": "groupF",
+        "required": false,
+        "disabled": false
+      },
+      {
+        "id": "photoCapture",
+        "controlType": "photo",
+        "labelName": {
+          "eng": "Capture Photo",
+          "khm": "ថតរូប"
+        },
+        "placeholder": {
+          "eng": "Click to capture photo",
+          "khm": "ចុចដើម្បីថតរូប"
+        },
+        "info": {
+          "eng": "Please capture a recent photo using your device's camera.",
+          "khm": "In Khmer, Please capture a recent photo using your device's camera."
+        },
+        "acceptedFileTypes": "image/jpeg , image/jpg , image/png , image/webp",
+        "required": false,
+        "alignmentGroup": "groupF",
+        "disabled": false
+      },
+      {
+        "id": "gender",
+        "type": "simpleType",
+        "subType": "genderVal",
+        "controlType": "radio",
+        "labelName": {
+          "eng": "Gender",
+          "khm": "ភេទ"
+        },
+        "placeholder": {
+          "eng": "Select Gender",
+          "khm": "ជ្រើសរើសភេទ"
+        },
+        "alignmentGroup": "groupG",
+        "required": false,
+        "disabled": false
+      },
+      {
+        "id": "passport",
+        "subType": "passportVal",
+        "controlType": "fileupload",
+        "labelName": {
+          "eng": "Passport",
+          "khm": "លិខិតឆ្លងដែន"
+        },
+        "placeholder": {
+          "eng": "Select an Option",
+          "khm": "លិខិតឆ្លងដែន"
+        },
+        "required": false,
+        "acceptedFileTypes": [
+          "application/pdf",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "application/msword",
+          "application/msword",
+          "video/x-matroska"
+        ],
+        "maxFileSizeMB": 1,
+        "alignmentGroup": "groupH",
+        "disabled": false
+      },
+      {
+        "id": "photo",
+        "subType": "photoVal",
+        "controlType": "fileupload",
+        "labelName": {
+          "eng": "Photo",
+          "khm": "រូបថត"
+        },
+        "placeholder": {
+          "eng": "Select an Option",
+          "khm": "លិខិតឆ្លងដែន"
+        },
+        "required": false,
+        "acceptedFileTypes": ["image/jpeg", "image/gif", "image/x-icon"],
+        "maxFileSizeMB": 5,
+        "alignmentGroup": "groupI",
+        "disabled": false
+      },
+      {
+        "id": "consent",
+        "controlType": "checkbox",
+        "labelName": {
+          "eng": "I agree to <b><a href='#'>Terms & Conditions</a></b> and <b><a href='#'>Privacy Policy</a></b>, to store & process my information as required.",
+          "khm": "ខ្ញុំយល់ព្រមតាម<b><a href='#'>លក្ខខណ្ឌ</a></b> និង<b><a href='#'>គោលការណ៍ឯកជនភាព</a></b>របស់ប្រទេសកម្ពុជា ដើម្បីរក្សាទុក និងដំណើរការព័ត៌មានរបស់ខ្ញុំតាមតម្រូវការ។"
+        },
+        "required": false,
+        "alignmentGroup": "groupD",
+        "disabled": false
+      },
+      {
+        "id": "preferredLang",
+        "controlType": "dropdown",
+        "labelName": {
+          "eng": "eng"
+        },
+        "required": true,
+        "alignmentGroup": "groupJ",
+        "disabled": false
+      }
+    ],
+    "resetPasswordChallengeFields": ["dob"],
+    "allowedValues": {
+      "qualification": {
+        "highSchool": {
+          "eng": "High School",
+          "khm": "សាលាថ្នាក់មធ្យម"
+        },
+        "bachelor": {
+          "en": "Bachelor's Degree",
+          "khm": "បរិញ្ញាបត្រទី១"
+        },
+        "master": {
+          "eng": "Master's Degree",
+          "km": "បរិញ្ញាបត្រទី២"
+        },
+        "phd": {
+          "en": "PhD",
+          "km": "បរិញ្ញាបត្រទី៣"
+        },
+        "secondary": {
+          "km": "Secondary School in khmer"
+        }
+      },
+      "genderVal": {
+        "male": {
+          "eng": "Male",
+          "khm": "ប្រុស"
+        },
+        "female": {
+          "eng": "Female",
+          "khm": "ស្រី"
+        },
+        "other": {
+          "eng": "Other",
+          "khm": "ផ្សេងទៀត"
+        }
+      },
+      "passportVal": {
+        "aadhar": {
+          "en": "Aadhar ID",
+          "km": "អាយឌីអាហ្កាដារ"
+        },
+        "rental": {
+          "en": "Rental",
+          "km": "ជួល"
+        }
+      },
+      "photoVal": {
+        "selfie": { "en": "Selfie", "km": "រូបថត" },
+        "profile": { "en": "Profile", "km": "រូបថត" }
+      },
+      "preferredLang": {
+        "eng": {
+          "eng": "English"
+        }
+      }
+    },
+    "i18nValues": {
+      "errors": {
+        "required": {
+          "en": "This field is required",
+          "ara": "هذه الخانة مطلوبه",
+          "km": "វាលនេះត្រូវការទទួលបាន"
+        },
+        "passwordMismatch": {
+          "en": "Passwords is not matching please check your password",
+          "km": "In Khmer, Passwords is not matching please check your password"
+        }
+      },
+      "labels": {
+        "password_confirm": {
+          "en": "Confirm Password",
+          "km": "បញ្ជាក់ពាក្យសម្ងាត់"
+        },
+        "capturePhoto": {
+          "en": "Capture Photo",
+          "km": "ថតរូប"
+        },
+        "clickToUpload": {
+          "en": "Click to upload",
+          "km": "ចុចដើម្បីផ្ទុកឡើង"
+        },
+        "docType": {
+          "en": "Document Type",
+          "km": "ប្រភេទឯកសារ"
+        },
+        "docRef": {
+          "en": "Document Reference ID",
+          "km": "លេខយោងឯកសារ"
+        },
+        "proofOfDoc": {
+          "en": "Proof Of Document",
+          "km": "ភស្តុតាងឯកសារ"
+        }
+      },
+      "placeholders": {
+        "password_confirm": {
+          "en": "Enter your confirm password",
+          "km": "បញ្ចូលពាក្យសម្ងាត់ដែលបានបញ្ជាក់"
+        },
+        "docType": {
+          "en": "Select an option",
+          "km": "ជ្រើសជម្រើសមួយ"
+        },
+        "docRef": {
+          "en": "Enter Reference ID here",
+          "km": "បញ្ចូលលេខយោងនៅទីនេះ"
+        },
+        "proofOfDoc": {
+          "en": "Click to upload or drag and drop",
+          "km": "ចុចដើម្បីផ្ទុកឡើង ឬទាញបោះ"
+        }
+      }
+    },
+    "language": {
+      "mandatory": ["eng", "khm"],
+      "optional": ["ara"],
+      "langCodeMap": {
+        "khm": "km",
+        "eng": "en",
+        "ara": "ar"
+      }
+    }
+  }
